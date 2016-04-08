@@ -1,0 +1,12 @@
+com/fenghui/commons/logging/MDCKey.class
+com/fenghui/commons/templates/HandleEntityTemplate.class
+com/fenghui/commons/logging/Logger.class
+com/fenghui/commons/enums/PoliticsStatus.class
+com/fenghui/commons/logging/LogContextFilter.class
+com/fenghui/commons/enums/MaritalStatus.class
+com/fenghui/commons/enums/Gender.class
+com/fenghui/commons/utils/Utils.class
+com/fenghui/commons/utils/Constants.class
+com/fenghui/commons/enums/EducationDegree.class
+com/fenghui/commons/logging/LoggingContext.class
+com/fenghui/commons/interfaces/IHandleEntity.class

@@ -1,0 +1,107 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+		<title>股票详情页</title>
+		<!-- <link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+		<link rel="stylesheet" href="css/layout.css" /> -->
+	</h:head>
+	<h:body>
+		<ui:composition template="/pagetemplates/common/commonLayout.xhtml">
+			<ui:define name="content">
+				<ui:include src="/pagetemplates/LoginPageContent.xhtml" />
+			</ui:define>
+			<ui:define name="header">
+				<ui:include src="/pagetemplates/common/publicHeader/publicHeader2.xhtml" />
+			</ui:define>
+			<ui:define name="banner">
+				<ui:include src="" />
+			</ui:define>
+			<ui:define name="footer">
+				<ui:include src="/pagetemplates/common/publicFooter/publicFooter1.xhtml" />
+			</ui:define>
+		</ui:composition>
+	</h:body>
+	<script type="text/javascript">
+$(document).ready(function() {
+    function randomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    };
+    $('#captchaOperation').html([randomNumber(1, 100), '+', randomNumber(1, 200), '='].join(' '));
+
+    $('#defaultForm').bootstrapValidator({
+
+        message: 'This value is not valid',
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+       
+            username: {
+                message: '用户名无效',
+                validators: {
+                    notEmpty: {
+                        message: '用户名不能位空'
+                    },
+                    stringLength: {
+                        min: 6,
+                        max: 30,
+                        message: '用户名必须大于6，小于30个字'
+                    },
+                    regexp: {
+                        regexp: /^([a-zA-Z0-9]|[_]){4,20}$/,
+                        message: '用户名为4～20个字符的英文字母，数字或下划线'
+                    },
+                    remote: {
+                        url: '#',
+                        message: '用户名不可用'
+                    },
+                    different: {
+                        field: 'password',
+                        message: '用户名和密码不能相同'
+                    }
+                }
+            },
+          
+            password: {
+                validators: {
+                    notEmpty: {
+                        message: '密码不能位空'
+                    },
+//                  identical: {
+//                      field: 'confirmPassword',
+//                      message: '两次密码不一致'
+//                  },
+                    different: {
+                        field: 'username',
+                        message: '用户名和密码不能相同'
+                    }
+                }
+            },
+           
+            captcha: {
+                validators: {
+                    callback: {
+                        message: '答案错误',
+                        callback: function(value, validator) {
+                            var items = $('#captchaOperation').html().split(' '), sum = parseInt(items[0]) + parseInt(items[2]);
+                            return value == sum;
+                        }
+                    }
+                }
+            }
+        }
+    });
+
+    $('#validateBtn').click(function() {
+        $('#defaultForm').bootstrapValidator('validate');
+    });
+});
+</script>
+</ui:composition>

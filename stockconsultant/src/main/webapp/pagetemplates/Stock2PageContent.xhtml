@@ -1,0 +1,450 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+	<h:head>
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+		<link rel="stylesheet" href="css/layout.css" />  -->
+		<style type="text/css">
+		body {
+				background-color: #F0F0F0;
+				}
+		</style>
+	</h:head>
+	<h:body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="selling">
+
+					<div class="selling_shock">
+						<div class="selling_left">
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs win2 stock_nav" role="tablist">
+								<li role="presentation" class="active"><a href="#Stockpool"
+									aria-controls="Stockpool" role="tab" data-toggle="tab">股票池</a></li>
+								<li role="presentation"><a href="#course"
+									aria-controls="course" role="tab" data-toggle="tab">网络课程</a></li>
+								<li role="presentation"><a href="#viewpoint"
+									aria-controls="viewpoint" role="tab" data-toggle="tab">老师观点</a></li>
+							</ul>
+							<!-- Tab panes -->
+							<div class="tab-content">
+
+								<div role="tabpanel" class="tab-pane fade in active stock_man"
+									id="Stockpool">
+									<div class="stock_tab text-center">
+										<h:form id="testForm" class="form-inline">
+											<h:dataTable rendered="true" border="0"
+												class="table table-striped table-hover2 table-responsive"
+												id="dataTableInformation"
+												value="#{roomController.informationList}"
+												var="singleInformation">
+
+												<h:column>
+													<f:facet name="header">个股名称</f:facet>
+
+													<h:outputText value="#{singleInformation.stockName}" />
+												</h:column>
+
+												<h:column>
+													<f:facet name="header">股票代码</f:facet>
+													<h:outputText value="#{singleInformation.stockCode}" />
+												</h:column>
+
+												<h:column>
+													<f:facet name="header">仓位状态</f:facet>
+													<h:outputText value="#{singleInformation.holdingStatus}" />
+												</h:column>
+
+												<h:column>
+													<f:facet name="header">买卖区间</f:facet>
+													买入价<br />
+													<h:outputText value="#{singleInformation.priceLowest}" />
+														
+													-<h:outputText value="#{singleInformation.priceHighest}" />
+												</h:column>
+
+												<h:column>
+													<f:facet name="header">建议仓位</f:facet>
+													<h:outputText value="#{singleInformation.holdingPercent}" />%
+											</h:column>
+
+												<h:column>
+													<f:facet name="header">推荐时间</f:facet>
+													<h:outputText value="#{singleInformation.releaseTime}">
+														<f:convertDateTime pattern="yyyy/MM/dd" />
+													</h:outputText>
+												</h:column>
+
+												<h:column>
+													<f:facet name="header">推荐人</f:facet>
+													<h:outputText
+														value="#{singleInformation.teachersDTO.userId.userPerson.name}" />
+												</h:column>
+
+												<h:column>
+													<f:facet name="header">推荐理由</f:facet>
+													<h:commandLink id="commandLinkSample"
+														action="#{stockInfoController.findInformationDTO}">
+														<h:graphicImage value="img/shock_book.png" alt="推荐理由" />
+														<f:param name="informationId"
+															value="#{singleInformation.id}" />
+													</h:commandLink>
+
+												</h:column>
+											</h:dataTable>
+										</h:form>
+										<div class="col-xs-12 col-md-12 text-center">
+											<nav>
+												<ul class="pagination page_ui2">
+													<li><h:outputLink href="#" aria-label="Previous">
+															<span aria-hidden="true">首页</span>
+														</h:outputLink></li>
+													<li><h:outputLink href="#">上一页</h:outputLink></li>
+													<li><h:outputLink href="#">1</h:outputLink></li>
+													<li><h:outputLink href="#">2</h:outputLink></li>
+													<li><h:outputLink href="#">3</h:outputLink></li>
+													<li><h:outputLink href="#">4</h:outputLink></li>
+													<li><h:outputLink href="#">5</h:outputLink></li>
+													<li><h:outputLink href="#">下一页</h:outputLink></li>
+													<li><h:outputLink href="#" aria-label="Next">
+															<span aria-hidden="true">末页</span>
+														</h:outputLink></li>
+												</ul>
+											</nav>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+
+								<div role="tabpanel" class="tab-pane fade courses_man"
+									id="course">
+
+									<div class="courses_b">
+										<ul>
+											<c:forEach items="#{roomController.courseList}"
+												var="singleCourse" varStatus="idx">
+												<li><h:outputLink href="javascript:;">
+														<div class="free">
+															<h:graphicImage value="img/mf.png" />
+														</div>
+														<div class="thumbnail">
+															<h:graphicImage value="img/conurser.jpg"
+																alt="#{singleCourse.title}"
+																title="#{singleCourse.title}" />
+															<div class="caption">
+																<h5>
+																	<span class="text-muted">课程：</span>#{singleCourse.title}
+																</h5>
+																<p>
+																	<span class="text-muted">主讲老师：</span>#{singleCourse.ownerId}
+																</p>
+															</div>
+														</div>
+													</h:outputLink></li>
+
+											</c:forEach>
+										</ul>
+										<div class="clearfix"></div>
+									</div>
+									<h:commandButton type="button"
+										class="btn btn-default btn-md btn-block courses_more"
+										value="查看更多" />
+								</div>
+
+								<div role="tabpanel" class="tab-pane fade teacher_view"
+									id="viewpoint">
+									<div class="list-group">
+									<h:form id="viewPointForm">
+									<c:forEach items="#{roomController.viewPonitlist}" var="singleViewPoint">
+										<h:commandLink id="commandLinkViewPoint" class="list-group-item teacher_view_t" action="#{viewPointInfoController.findViewPointInfo}" >
+											<span class="gnewr_l">#{singleViewPoint.title}</span>
+											<span class="gnewr_r">浏览：1945 | 发布时间：<h:outputText value="#{singleViewPoint.releaseTime}">
+												<f:convertDateTime pattern="yyyy/MM/dd" />
+													</h:outputText>
+											</span>
+											<f:param name="viewPointId" value="#{singleViewPoint.id}" />
+										</h:commandLink>
+									</c:forEach>
+									</h:form>
+									</div>
+									<div class="col-xs-12 col-md-12 text-center">
+										<nav>
+											<ul class="pagination page_ui2">
+												<li><h:outputLink href="#" aria-label="Previous">
+														<span aria-hidden="true">首页</span>
+													</h:outputLink></li>
+												<li><h:outputLink href="#">上一页</h:outputLink></li>
+												<li><h:outputLink href="#">1</h:outputLink></li>
+												<li><h:outputLink href="#">2</h:outputLink></li>
+												<li><h:outputLink href="#">3</h:outputLink></li>
+												<li><h:outputLink href="#">4</h:outputLink></li>
+												<li><h:outputLink href="#">5</h:outputLink></li>
+												<li><h:outputLink href="#">下一页</h:outputLink></li>
+												<li><h:outputLink href="#" aria-label="Next">
+														<span aria-hidden="true">末页</span>
+													</h:outputLink></li>
+											</ul>
+										</nav>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="selling_right">
+							<div class="selling_teacher">
+								<h:graphicImage value="#{roomController.teacherDTO.photoLocation}"
+									class="img-responsive teacher_img2" alt="ms,serzhang"
+									title="ms,serzhang" />
+								<div class="teacher_text2">
+									<h3>#{roomController.teacherDTO.userId.userPerson.name}</h3>
+									<h5>#{roomController.teacherDTO.position}</h5>
+									<p>#{roomController.teacherDTO.description}</p>
+								</div>
+							</div>
+						<!-- <div class="selling_right">
+							<div class="selling_teacher">
+								<h:graphicImage value="img/teacher_img.jpg"
+									class="img-responsive teacher_img2" alt="ms,serzhang"
+									title="ms,serzhang" />
+								<div class="teacher_text2">
+									<h3>罗嘉全</h3>
+									<h5>职位：高级金融分析师</h5>
+									<p>简介：罗嘉全，上海新兰德证券投资资讯顾问的资深投资顾问，涨停板龙头，借势黑马战法</p>
+								</div>
+							</div> -->
+							
+							
+							<div class="teacher_news2">
+								<div class="teacher_top">财经要闻</div>
+								<div class="teacher_news_t">
+									<ul>
+									<h:form>
+										<h:dataTable rendered="true" 
+											id="dataTableNews"
+											value="#{newsController.newsList}"
+											var="singleNewsList">
+											<h:column>
+												<li>
+												<h:commandLink type="submit"  action="#{newsInfoController.findNews}">
+						      							<f:param name="newsId" value="#{singleNewsList.id}" />
+						      							<h:outputText value="#{singleNewsList.title},#{singleNewsList.id}" />
+						     	 				</h:commandLink>
+													<!-- <h:outputLink value="#{newsInfoController.findNews}">
+														<h:outputText value="#{singleNewsList.content}" />
+														<f:param name="id" value="#{singleNewsList.id}" />
+													</h:outputLink> -->
+												</li>
+											</h:column>
+										</h:dataTable>
+										</h:form>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="clearfix"></div>
+					</div>
+
+					<!--盘前资讯-->
+					<div class="information_zx">
+						<div class="information_img">
+							<span class="tion_l">盘前资讯</span><span class="tion_r"><h:outputLink
+									href="javascript:;">更多</h:outputLink></span>
+						</div>
+						<div class="information_warp">
+							<ul class="media-list">
+								<li>
+									<div class="media-left">
+										<h:outputLink href="javascript:;">
+											<img class="media-object" src="img/information.png"
+												alt="川金诺4日申购宝典" title="川金诺4日申购宝典" />
+										</h:outputLink>
+									</div>
+									<div class="media-body">
+										<h:outputLink href="javascript:;">
+											<h4 class="media-heading">川金诺4日申购宝典</h4>
+											<p class="text-muted">根据监管层安排，川金诺将于3月4日根据监管层安排，川金诺将于3月4日根据监管层安排，川金诺将于3月4日465464646</p>
+										</h:outputLink>
+									</div>
+								</li>
+								<li>
+									<div class="media-left">
+										<h:outputLink href="javascript:;">
+											<img class="media-object" src="img/information.png"
+												alt="川金诺4日申购宝典" title="川金诺4日申购宝典" />
+										</h:outputLink>
+									</div>
+									<div class="media-body">
+										<h:outputLink href="javascript:;">
+											<h4 class="media-heading">川金诺4日申购宝典</h4>
+											<p class="text-muted">根据监管层安排，川金诺将于3月4日根据监管层安排，</p>
+										</h:outputLink>
+									</div>
+								</li>
+								<li>
+									<div class="media-left">
+										<h:outputLink href="javascript:;">
+											<img class="media-object" src="img/information.png"
+												alt="川金诺4日申购宝典" title="川金诺4日申购宝典" />
+										</h:outputLink>
+									</div>
+									<div class="media-body">
+										<h:outputLink href="javascript:;">
+											<h4 class="media-heading">川金诺4日申购宝典</h4>
+											<p class="text-muted">根据监管层安排，川金诺将于3月4日根据监管层安排，川金诺</p>
+										</h:outputLink>
+									</div>
+								</li>
+								<li>
+									<div class="media-left">
+										<h:outputLink href="javascript:;">
+											<img class="media-object" src="img/information.png"
+												alt="川金诺4日申购宝典" title="川金诺4日申购宝典" />
+										</h:outputLink>
+									</div>
+									<div class="media-body">
+										<h:outputLink href="javascript:;">
+											<h4 class="media-heading">川金诺4日申购宝典</h4>
+											<p class="text-muted">根据监管层安排，川金诺将于3月4日根据监管层安排，川金诺</p>
+										</h:outputLink>
+									</div>
+								</li>
+								<li>
+									<div class="media-left">
+										<h:outputLink href="javascript:;">
+											<img class="media-object" src="img/information.png"
+												alt="川金诺4日申购宝典" title="川金诺4日申购宝典" />
+										</h:outputLink>
+									</div>
+									<div class="media-body">
+										<h:outputLink href="javascript:;">
+											<h4 class="media-heading">川金诺4日申购宝典</h4>
+											<p class="text-muted">根据监管层安排，川金诺将于3月4日根据监管层安排，川金诺</p>
+										</h:outputLink>
+									</div>
+								</li>
+							</ul>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+
+					<div class="banner2">
+						<h:graphicImage value="img/banner2.jpg" class="img-responsive"
+							alt="banner2" title="banner2" />
+					</div>
+					<div class="banner3">
+						<h:graphicImage value="img/banner3.jpg" class="img-responsive"
+							alt="banner3" title="banner3" />
+					</div>
+
+					<!--老师互动-->
+					<div class="teacher_interaction">
+						<div class="tion">老师互动</div>
+						<ul class="media-list list_test mCustomScrollbar"
+							data-mcs-theme="dark">
+							<li class="media">
+								<div class="media-left">
+									<img class="media-object img-circle" src="img/test.png"
+										alt="name" />
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading media_name">张小凡</h4>
+									刘老师是佛问候我回购金额哦荣阿济格是GV是单个更舒适的回复搜索
+								</div>
+							</li>
+							<li class="media">
+								<div class="media-left">
+									<img class="media-object img-circle" src="img/test.png"
+										alt="name" />
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading media_name">张小凡</h4>
+									刘老师是佛问候我回购金额哦荣阿济格是GV是单个更舒适的回复搜索
+								</div>
+							</li>
+							<li class="media">
+								<div class="media-left">
+									<img class="media-object img-circle" src="img/test.png"
+										alt="name" />
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading media_name">张小凡</h4>
+									刘老师是佛问候我回购金额哦荣阿济格是GV是单个更舒适的回复搜索
+								</div>
+							</li>
+							<li class="media">
+								<div class="media-left">
+									<img class="media-object img-circle" src="img/test.png"
+										alt="name" />
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading media_name">张小凡</h4>
+									刘老师是佛问候我回购金额哦荣阿济格是GV是单个更舒适的回复搜索
+								</div>
+							</li>
+						</ul>
+						<!--你的看法-->
+						<div class="perspective">
+							<h4>说说你的看法吧</h4>
+							<div class="row tivebtn">
+								<div class="col-xs-11">
+									<h:inputText type="text" class="form-control"
+										placeholder="说说你的看法吧!" />
+								</div>
+								<div class="col-xs-1">
+									<h:commandButton type="button" class="btn btn-danger"
+										value="发送" />
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!--右侧个股咨询-->
+		<div class="rides-cs">
+			<div class="floatL">
+				<h:outputLink style="display:block" id="aFloatTools_Show"
+					class="btnOpen" title="查看个股咨询" value="javascript:void(0);">展开</h:outputLink>
+				<h:outputLink style="display:none" id="aFloatTools_Hide"
+					class="btnCtn" title="关闭个股咨询" value="javascript:void(0);">收缩</h:outputLink>
+			</div>
+			<div id="divFloatToolsView" class="floatR" style="display: none">
+				<div class="cn">个股咨询</div>
+				<div class="contact">
+					<h:form class="form-inline tact">
+						<div class="form-group">
+							<h:outputLabel for="contact">联系方式：</h:outputLabel>
+							<h:inputText type="text" class="form-control contact_form"
+								id="contact" placeholder="请输入您的联系方式" />
+						</div>
+					</h:form>
+					<h:form>
+						<h:inputTextarea class="form-control contact_form2" rows="4"
+							placeholder="请写下你想咨询的股票"></h:inputTextarea>
+					</h:form>
+					<h:form class="tact tact2">
+						<div class="form-group">
+							<h:outputLabel for="contact">
+								<div class="rx_phone">
+									<span class="glyphicon glyphicon-earphone"></span>
+									客服热线：400-12345678
+								</div>
+							</h:outputLabel>
+							<h:commandButton type="button" class="btn btn-danger refer"
+								value="提交" />
+						</div>
+					</h:form>
+				</div>
+			</div>
+		</div>
+	</h:body>
+</ui:composition>

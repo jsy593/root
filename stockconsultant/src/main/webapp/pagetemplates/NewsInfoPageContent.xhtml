@@ -1,0 +1,99 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	<h:head>
+		<!-- <link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+		<link rel="stylesheet" href="css/layout.css" /> -->
+		<style type="text/css">
+			body{background-color: #F7F7F7;}
+		</style>
+	</h:head>
+<h:body>
+<div class="container-fluid">
+	<div class="row">
+		<div class="course">
+			
+			<p class="text-muted">您当前所在位置：首页 > 张静 > 文章列表页</p>
+			<div class="stock_body stock_body2">
+				<div class="stock_body_t text-center">
+					<h2><h:outputText value="#{newsInfoController.news.title}" /></h2>
+					<p><em>时间：<h:outputText value="#{newsInfoController.news.releaseTime}" ><f:convertDateTime pattern="yyyy/MM/dd" /></h:outputText></em>
+					   <em>来源：<h:outputText value="#{newsInfoController.news.originalSource}" /></em></p>
+				</div>
+				<div class="stock_body_ner">
+					<!-- Data Start-->
+					<h:outputText value="#{newsInfoController.news.content}" />
+					<!-- Data End -->
+				</div>
+				<div class="qqkf text-center" data-toggle="modal" data-target="#myModal"><a href="javascript:;"><h:graphicImage value="img/qqkf.gif" /></a></div><!--点击客服-->
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!--myModal-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog xld_dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<!-- <h:commandButton type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</h:commandButton> -->
+				<h:commandButton type="button" class="close" data-dismiss="modal" aria-hidden="true" value="x"></h:commandButton>
+				<h4 class="modal-title" id="myModalLabel">个股咨询</h4>
+			</div>
+			<div class="modal-body stock_body_text">
+				<h:form class="form-inline tact tact_t">
+				  <div class="form-group">
+				    <h:outputLabel for="contact">联系方式：</h:outputLabel>
+				    <h:inputText type="text" class="form-control contact_formk" id="contact" placeholder="请输入您的联系方式" />
+				  </div>
+				</h:form>
+				<h:form>
+					<h:inputTextarea class="form-control contact_form2" rows="4" placeholder="请写下你想咨询的股票"></h:inputTextarea>
+				</h:form>
+				<h:form class="tact tact2">
+					<div class="form-group">
+					    <h:outputLabel for="contact"><div class="rx_phone"><span class="glyphicon glyphicon-earphone"></span> 客服热线：400-12345678</div></h:outputLabel>
+					</div>
+				</h:form>
+			</div>
+			<div class="modal-footer">
+				<h:commandButton  type="button" class="btn btn-default demopading" data-dismiss="modal" value="关闭"></h:commandButton>
+				<h:commandButton type="	button" class="btn btn-danger demopading" value="提交"></h:commandButton>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--右侧个股咨询-->
+<div class="rides-cs">
+	<div class="floatL">
+		<a style="display:block" id="aFloatTools_Show" class="btnOpen" title="查看个股咨询" href="javascript:void(0);">展开</a>
+		<a style="display:none" id="aFloatTools_Hide" class="btnCtn" title="关闭个股咨询" href="javascript:void(0);">收缩</a>
+	</div>
+	<div id="divFloatToolsView" class="floatR" style="display:none">
+		<div class="cn">个股咨询</div>
+		<div class="contact">
+			<h:form class="form-inline tact">
+			  <div class="form-group">
+			    <h:outputLabel for="contact">联系方式：</h:outputLabel>
+			    <h:inputText type="text" class="form-control contact_form" id="contact" placeholder="请输入您的联系方式" />
+			  </div>
+			</h:form>
+			<h:form>
+				<h:inputTextarea class="form-control contact_form2" rows="4" placeholder="请写下你想咨询的股票"></h:inputTextarea>
+			</h:form>
+			<h:form class="tact tact2">
+				<div class="form-group">
+				    <h:outputLabel for="contact"><div class="rx_phone"><span class="glyphicon glyphicon-earphone"></span> 客服热线：400-12345678</div></h:outputLabel>
+				    <h:commandButton type="button" class="btn btn-danger refer" value="提交"></h:commandButton>
+				</div>
+			</h:form>
+		</div>
+	</div>
+</div>
+</h:body>
+</ui:composition>

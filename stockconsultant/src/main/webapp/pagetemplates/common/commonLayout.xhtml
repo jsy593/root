@@ -1,0 +1,40 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	<h:head>
+	<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+		<link rel="stylesheet" href="css/layout.css" />
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script type="text/javascript" src="js/xld.js"></script>
+		<style type="text/css">
+			/* body{background-color: #F7F7F7;} */
+			article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+		</style>
+	</h:head>
+	<h:body>
+		<ui:insert name="header">
+			<ui:include src="/pagetemplates/common/commonHeader.xhtml" />
+		</ui:insert>
+		<ui:insert name="banner">
+			<ui:include src="/pagetemplates/common/commonBanner.xhtml" />
+		</ui:insert>
+		<ui:insert name="content">
+			<ui:include src="/pagetemplates/common/commonContent.xhtml" />
+		</ui:insert>
+		<ui:insert name="footer">
+			<ui:include src="/pagetemplates/common/commonFooter.xhtml" />
+		</ui:insert>
+	</h:body>
+</ui:composition>

@@ -1,0 +1,97 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:t="http://myfaces.apache.org/trinidad" xml:lang="en" lang="en"
+	>
+<h:head>
+	<!-- <link rel="stylesheet" href="../css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../css/layout.css" /> -->
+	<style type="text/css">
+		body{background-color: #EDEDED;}
+	</style>
+</h:head>
+<h:body>
+<div class="container-fluid">
+	<div class="row">
+		<div class="teacher_course">
+			
+			<div class="publish">发布课程</div>
+			<h4 class="message_t">基本信息</h4>
+			<div class="teacher_m">
+				<div class="teacher_info">
+					<!--left-->
+					<div class="teacher_info_l">
+						<h:form class="form-inline">
+						  <div class="form-group form_bd">
+						    <h:outputLabel for="username" value="课程名称：" />
+						    <h:inputText class="form-control" id="username" placeholder="金证股份" />
+						  </div>
+						  <div class="form-group form_bd">
+						    <h:outputLabel for="course" value="课程链接：" />
+						    <h:inputText  class="form-control" id="course" placeholder="20%" />
+						  </div>
+						  <div class="form-group form_bd">
+						    <h:outputLabel for="amount" value="收费金额："></h:outputLabel>
+						    <h:inputText class="form-control" id="amount" placeholder="￥20.00" />
+						  </div>
+						</h:form>
+					</div>
+					<!--right-->
+					<div class="teacher_info_r" id="warp">
+						<li>
+					    	<h:outputLink href="javascript:;" class="a-upload"><input type="file"  name="" id="up_img_WU_FILE_0" />上传</h:outputLink>
+					    	<h:graphicImage class="" id="imgShow_WU_FILE_0" width="114" height="145" />
+						</li>
+					</div>
+					<!--简介-->
+					<h:form class="form-inline">
+						  <div class="form-group form_bd">
+						    <h:outputLabel for="username">课程简介：</h:outputLabel>
+						    <h:inputTextarea class="form-control contact_form2" rows="4" placeholder="请写下你想咨询的股票"></h:inputTextarea>
+						  </div>
+					</h:form>
+					<h:form class="published">
+						<div class="form-group text-center">
+						    <h:commandButton class="btn btn-primary" value="取消" />
+						    <h:commandButton class="btn btn-danger" value="发表" />
+						</div>
+					</h:form>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<!--右侧个股咨询-->
+<div class="rides-cs">
+	<div class="floatL">
+		<h:outputLink style="display:block" id="aFloatTools_Show" class="btnOpen" title="查看个股咨询" value="javascript:void(0)"><h:outputText value="展开" /></h:outputLink>
+		<h:outputLink style="display:none" id="aFloatTools_Hide" class="btnCtn" title="关闭个股咨询" value="javascript:void(0);"><h:outputText value="收缩" /></h:outputLink>
+	</div>
+	<div id="divFloatToolsView" class="floatR" style="display:none">
+		<div class="cn">个股咨询</div>
+		<div class="contact">
+			<h:form class="form-inline tact">
+			  <div class="form-group">
+			    <h:outputLabel for="contact">联系方式：</h:outputLabel>
+			    <h:inputText class="form-control contact_form" id="contact" placeholder="请输入您的联系方式" />
+			  </div>
+			</h:form>
+			<h:form>
+				<h:inputTextarea class="form-control contact_form2" rows="4" placeholder="请写下你想咨询的股票"></h:inputTextarea>
+			</h:form>
+			<h:form class="tact tact2">
+				<div class="form-group">
+				    <h:outputLabel for="contact"><div class="rx_phone"><span class="glyphicon glyphicon-earphone"></span> 客服热线：400-12345678</div></h:outputLabel>
+				    <h:commandButton  class="btn btn-danger refer" value="提交" />
+				</div>
+			</h:form>
+		</div>
+	</div>
+</div>
+</h:body>
+</ui:composition>

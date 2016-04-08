@@ -1,0 +1,191 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	<h:head>
+		<!-- <link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+	<link rel="stylesheet" href="css/layout.css" /> -->
+	</h:head>
+	<h:body>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="stock_main">
+
+					<!--stock-left-->
+					<div class="stock_main_left">
+						<div class="stock_details">
+							<div class="picture">
+								<h:graphicImage value="img/stock.png" alt="股票详情" title="股票详情"
+									style="width: 329px;height: 55px;" />
+							</div>
+						</div>
+						<div class="stock_p">
+							<p>
+								推荐时间：
+								<h:outputText
+									value="#{stockInfoController.informationDTO.releaseTime}">
+									<f:convertDateTime pattern="yyyy/MM/dd" />
+								</h:outputText>
+							</p>
+							<p>
+								股票名称：
+								<h:outputText
+									value="#{stockInfoController.informationDTO.stockName}" />
+							</p>
+							<p>
+								仓位状态：
+								<h:outputText
+									value="#{stockInfoController.informationDTO.holdingStatus}" />
+							</p>
+							<p>
+								买卖区间：
+								<h:outputText
+									value="#{stockInfoController.informationDTO.priceLowest}" />
+								-
+								<h:outputText
+									value="#{stockInfoController.informationDTO.priceHighest}" />
+							</p>
+							<p>
+								建议仓位：
+								<h:outputText
+									value="#{stockInfoController.informationDTO.holdingPercent}" />
+								%
+							</p>
+							<p>止损：20.80-22.02</p>
+							<p>
+								投顾老师：
+								<h:outputText
+									value="#{stockInfoController.informationDTO.teachersDTO.userId.userPerson.name}" />
+								<h:outputText
+									value="#{stockInfoController.informationDTO.teachersDTO.userId.userPerson.name}" />
+							</p>
+						</div>
+					</div>
+					<!--stock-right-->
+					<div class="stock_main_right">
+						<div class="stock_title">
+							<h5 class="text-muted">
+								您当前所在位置：首页 >
+								<h:outputText
+									value="#{stockInfoController.informationDTO.teachersDTO.certificateNo}" />
+								> 股票详情页
+							</h5>
+						</div>
+						<div class="stock_body">
+							<div class="stock_body_t text-center">
+								<h2>
+									<h:outputText
+										value="#{stockInfoController.informationDTO.stockName}" />
+									(
+									<h:outputText
+										value="#{stockInfoController.informationDTO.stockCode}" />
+									)
+								</h2>
+							</div>
+							<div class="stock_body_ner">
+								<h:outputText
+									value="#{stockInfoController.informationDTO.recommendation}" />
+							</div>
+							<div class="qqkf text-center" data-toggle="modal"
+								data-target="#myModal">
+								<h:outputLink value="javascript:;">
+									<h:graphicImage value="img/qqkf.gif" />
+								</h:outputLink>
+							</div>
+							<!--点击客服-->
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!--myModal-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel">
+			<div class="modal-dialog xld_dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h:commandButton type="button" class="close" data-dismiss="modal"
+							aria-hidden="true" value="x" />
+						<h4 class="modal-title" id="myModalLabel">个股咨询</h4>
+					</div>
+					<div class="modal-body stock_body_text">
+						<h:form class="form-inline tact tact_t">
+							<div class="form-group">
+								<h:outputLabel for="contact">联系方式：</h:outputLabel>
+								<h:inputText type="text" class="form-control contact_formk"
+									id="contact" placeholder="请输入您的联系方式" />
+							</div>
+						</h:form>
+						<h:form>
+							<h:inputTextarea class="form-control contact_form2" rows="4"
+								placeholder="请写下你想咨询的股票"></h:inputTextarea>
+						</h:form>
+						<h:form class="tact tact2">
+							<div class="form-group">
+								<h:outputLabel for="contact">
+									<div class="rx_phone">
+										<span class="glyphicon glyphicon-earphone"></span>
+										客服热线：400-12345678
+									</div>
+								</h:outputLabel>
+							</div>
+						</h:form>
+					</div>
+					<div class="modal-footer">
+						<h:commandButton type="button" class="btn btn-default demopading"
+							data-dismiss="modal" value="关闭" />
+						<h:commandButton type="button" class="btn btn-danger demopading"
+							value="提交" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--右侧个股咨询-->
+		<div class="rides-cs">
+			<div class="floatL">
+				<h:outputLink style="display:block" id="aFloatTools_Show"
+					class="btnOpen" title="查看个股咨询" href="javascript:void(0);">
+					<h:outputText value="展开" />
+				</h:outputLink>
+				<h:outputLink style="display:none" id="aFloatTools_Hide"
+					class="btnCtn" title="关闭个股咨询" href="javascript:void(0);">
+					<h:outputText value="收缩" />
+				</h:outputLink>
+			</div>
+			<div id="divFloatToolsView" class="floatR" style="display: none">
+				<div class="cn">个股咨询</div>
+				<div class="contact">
+					<h:form class="form-inline tact">
+						<div class="form-group">
+							<h:outputLabel for="contact">联系方式：</h:outputLabel>
+							<h:inputText type="text" class="form-control contact_form"
+								id="contact" placeholder="请输入您的联系方式" />
+						</div>
+					</h:form>
+					<h:form>
+						<h:inputTextarea class="form-control contact_form2" rows="4"
+							placeholder="请写下你想咨询的股票"></h:inputTextarea>
+					</h:form>
+					<h:form class="tact tact2">
+						<div class="form-group">
+							<h:outputLabel for="contact">
+								<div class="rx_phone">
+									<span class="glyphicon glyphicon-earphone"></span>
+									客服热线：400-12345678
+								</div>
+							</h:outputLabel>
+							<h:commandButton type="button" class="btn btn-danger refer"
+								value="提交"></h:commandButton>
+						</div>
+					</h:form>
+				</div>
+			</div>
+		</div>
+	</h:body>
+</ui:composition>

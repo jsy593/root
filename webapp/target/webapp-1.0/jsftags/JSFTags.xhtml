@@ -1,0 +1,145 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+		<title>JSF Tags</title>
+		<meta http-equiv="keywords" content="enter,your,keywords,here" />
+		<meta http-equiv="description"
+			content="A short description of this page." />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<script type="text/javascript" src="../js/cn.js"></script>
+	</h:head>
+	<h:body>
+		<h:form>
+			<h:panelGrid columns="3">
+				<h:outputLabel for="inputTextSample" value="InputText Sample:" />
+				<h:inputText id="inputTextSample" value="" required="true" />
+				<h:message for="inputTextSample" />
+
+				<h:outputLabel for="inputTextareaSample"
+					value="InputTextarea Sample:" />
+				<h:inputTextarea id="inputTextareaSample" value="" required="true" />
+				<h:message for="inputTextareaSample" />
+
+				<h:outputLabel for="inputSecretSample" value="InputSecret Sample:" />
+				<h:inputSecret id="inputSecretSample" value="" required="true" />
+				<h:message for="inputSecretSample" />
+
+				<h:outputLabel for="inputHiddenSample" value="InputHidden Sample:" />
+				<h:inputHidden id="inputHiddenSample" value="Hidden" />
+				<h:message for="inputHiddenSample" />
+
+				<h:outputLabel for="calendarSample" value="Calendar Sample:" />
+				<p:calendar id="calendarSample" pattern="yyyy-MM-dd"
+					navigator="true" showOn="button" locale="cn" styleClass="short_len"
+					yearRange="1900:+2" display="inline"
+					value="#{personController.person.personBirthday}">
+				</p:calendar>
+				<h:message for="calendarSample" />
+
+				<h:outputLabel for="selectBooleanCheckboxSample"
+					value="SelectBooleanCheckbox Sample:" />
+				<h:selectBooleanCheckbox id="selectBooleanCheckboxSample" value="" />
+				<h:message for="selectBooleanCheckboxSample" />
+
+				<h:outputLabel for="selectLineOneRadioSample"
+					value="SelectLineOneRadio Sample:" />
+				<h:selectOneRadio id="selectLineOneRadioSample"
+					layout="lineDirection" value="One">
+					<f:selectItem itemLabel="One" itemValue="One" />
+					<f:selectItem itemLabel="Two" itemValue="Two" />
+					<f:selectItem itemLabel="Three" itemValue="Three" />
+				</h:selectOneRadio>
+				<h:message for="selectLineOneRadioSample" />
+
+				<h:outputLabel for="selectPageOneRadioSample"
+					value="SelectPageOneRadio Sample:" />
+				<h:selectOneRadio id="selectPageOneRadioSample"
+					layout="pageDirection" value="One">
+					<f:selectItem itemLabel="One" itemValue="One" />
+					<f:selectItem itemLabel="Two" itemValue="Two" />
+					<f:selectItem itemLabel="Three" itemValue="Three" />
+				</h:selectOneRadio>
+				<h:message for="selectPageOneRadioSample" />
+
+				<h:outputLabel for="selectOneListboxSample"
+					value="SelectOneListbox Sample:" />
+				<h:selectOneListbox id="selectOneListboxSample" value="One">
+					<f:selectItem itemLabel="One" itemValue="One" />
+					<f:selectItem itemLabel="Two" itemValue="Two" />
+					<f:selectItem itemLabel="Three" itemValue="Three" />
+				</h:selectOneListbox>
+				<h:message for="selectOneListboxSample" />
+
+				<h:outputLabel for="selectOneMenuSample"
+					value="SelectOneMenu Sample:" />
+				<h:selectOneMenu id="selectOneMenuSample" value="One">
+					<f:selectItem itemLabel="One" itemValue="One" />
+					<f:selectItem itemLabel="Two" itemValue="Two" />
+					<f:selectItem itemLabel="Three" itemValue="Three" />
+				</h:selectOneMenu>
+				<h:message for="selectOneMenuSample" />
+
+				<h:outputLabel for="selectManyCheckboxSample"
+					value="SelectManyCheckbox Sample:" />
+				<h:selectManyCheckbox id="selectManyCheckboxSample" value="One">
+					<f:selectItem itemLabel="One" itemValue="One" />
+					<f:selectItem itemLabel="Two" itemValue="Two" />
+					<f:selectItem itemLabel="Three" itemValue="Three" />
+					<f:selectItem itemLabel="Four" itemValue="Four" />
+				</h:selectManyCheckbox>
+				<h:message for="selectManyCheckboxSample" />
+
+				<h:outputLabel for="selectManyListboxSample"
+					value="SelectManyListbox Sample:" />
+				<h:selectManyListbox id="selectManyListboxSample" value="One">
+					<f:selectItem itemLabel="One" itemValue="One" />
+					<f:selectItem itemLabel="Two" itemValue="Two" />
+					<f:selectItem itemLabel="Three" itemValue="Three" />
+					<f:selectItem itemLabel="Four" itemValue="Four" />
+				</h:selectManyListbox>
+				<h:message for="selectManyListboxSample" />
+
+				<h:outputLabel for="selectManyMenuSample"
+					value="SelectManyMenu Sample:" />
+				<h:selectManyMenu id="selectManyMenuSample" value="One">
+					<f:selectItem id="one" itemLabel="one" itemValue="1" />
+					<f:selectItem id="two" itemLabel="two" itemValue="2" />
+					<f:selectItem id="three" itemLabel="three" itemValue="3" />
+					<f:selectItem id="four" itemLabel="four" itemValue="4" />
+				</h:selectManyMenu>
+				<h:message for="selectManyMenuSample" />
+
+				<h:outputLabel for="commandButtonSample"
+					value="CommandButton Sample:" />
+				<h:commandButton id="commandButtonSample" value="CommandButton"
+					action="#" />
+				<h:message for="commandButtonSample" />
+
+				<h:outputLabel for="commandLinkSample" value="CommandLink Sample:" />
+				<h:commandLink id="commandLinkSample" value="CommandLink" action="#">
+					<f:param name="locale" value="zh_CN" />
+				</h:commandLink>
+				<h:message for="commandLinkSample" />
+
+				<h:outputLabel for="outputLinkSample" value="OutputLink Sample:" />
+				<h:outputLink id="outputLinkSample" value="../index.jsp">
+					<h:outputText value="Link to Index" />
+					<f:param name="name" value="MyName" />
+				</h:outputLink>
+				<h:message for="outputLinkSample" />
+
+				<h:outputLabel for="outputFormatSample" value="OutputFormat Sample:" />
+				<h:outputFormat id="outputFormatSample"
+					value="{0}, Your name is {1}.">
+					<f:param value="Hello" />
+					<f:param value="Guest" />
+				</h:outputFormat>
+				<h:message for="outputFormatSample" />
+			</h:panelGrid>
+		</h:form>
+	</h:body>
+</ui:composition>

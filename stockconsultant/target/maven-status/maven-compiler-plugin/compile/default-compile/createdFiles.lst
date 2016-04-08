@@ -1,0 +1,10 @@
+com/fenghui/stockconsultant/controllers/RoomController.class
+com/fenghui/stockconsultant/controllers/NewsController.class
+com/fenghui/stockconsultant/controllers/ViewPointInfoController.class
+com/fenghui/stockconsultant/controllers/ViewPointController.class
+com/fenghui/stockconsultant/controllers/NewsInfoController.class
+com/fenghui/stockconsultant/controllers/StockInfoController.class
+com/fenghui/stockconsultant/controllers/TeacherOtherLinksController.class
+com/fenghui/stockconsultant/controllers/PersonController.class
+com/fenghui/stockconsultant/controllers/CourseListController.class
+com/fenghui/stockconsultant/controllers/UserController.class

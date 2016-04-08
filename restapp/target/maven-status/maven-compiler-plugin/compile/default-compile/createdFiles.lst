@@ -1,0 +1,5 @@
+com/fenghui/restapp/servlets/RestAppServlet.class
+com/fenghui/restapp/clients/JerseyClient.class
+com/fenghui/restapp/entities/Student.class
+com/fenghui/restapp/services/JerseyRestService.class
+com/fenghui/restapp/servlets/TestServletContainer.class

@@ -1,0 +1,809 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+	<link rel="stylesheet" href="css/layout.css" /> -->
+	<style type="text/css">
+		body{background-color: #EDEDED;}
+	</style>
+</h:head>
+<h:body>
+<div class="container-fluid">
+	<div class="row">
+		<div class="xld_mian">
+			
+			<!--teacher介绍-->
+			<div class="xld_mian_teacher">
+				<div class="teacher_img">
+					<h:graphicImage value="img/teahe_img.png" title="罗嘉全" alt="罗嘉全" class="img-circle" />
+				</div>
+				<div class="teacher_text">
+					<h3>罗嘉全</h3>
+					<h5 class="finan"><span>职位：<em>高级金融分析师</em></span><span class="financial">资质号：<em>AF888888</em></span></h5>
+					<h5>简介：罗嘉全，上海新兰德证券投资咨询顾问的资质投资顾问，涨停板龙头,借势黑马战法</h5>
+				</div>
+				<h:commandButton  class="btn btn-default amend"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+			</div>
+			
+			<!--胜赢-智赢-惠赢-->
+			<div class="container_win">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs win" role="tablist">
+				    <li role="presentation" class="active"><a href="#home1" aria-controls="home1" role="tab" data-toggle="tab">胜赢</a></li>
+				    <li role="presentation"><a href="#profile1" aria-controls="profile1" role="tab" data-toggle="tab">智赢</a></li>
+				    <li role="presentation"><a href="#messages1" aria-controls="messages1" role="tab" data-toggle="tab">慧赢</a></li>
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
+				    <div role="tabpanel" class="tab-pane fade in active" id="home1">
+				    	
+					<ul class="media-list list_test mCustomScrollbar" data-mcs-theme="dark">
+					  <li class="media">
+					    <div class="media-left"><h:graphicImage class="media-object img-circle" value="img/test.png" alt="name" /></div>
+					    <div class="media-body list_test_body"><h4 class="media-heading media_name">张小凡</h4>刘老师是佛问候我回购金额哦荣阿济格是GV是单个更舒适的回复搜索</div>
+					  	<div class="media-right text-right text-muted">2016-1-5 13:21:50<h5 class="blur"><h:outputLink value="javascript:;">回复</h:outputLink></h5></div>
+					  </li>
+					  <li class="media">
+					    <div class="media-left"><h:graphicImage class="media-object img-circle" value="img/test.png" alt="name" /></div>
+					    <div class="media-body list_test_body"><h4 class="media-heading media_name">张小凡</h4>刘老师是佛问候我回购金额哦荣阿济格是GV是单个更舒适的回复搜索</div>
+					  	<div class="media-right text-right text-muted">2016-1-5 13:21:50<h5 class="blur"><h:outputLink value="javascript:;">回复</h:outputLink></h5></div>
+					  </li>
+					  <li class="media">
+					    <div class="media-left"><h:graphicImage class="media-object img-circle" value="img/test.png" alt="name" /></div>
+					    <div class="media-body list_test_body"><h4 class="media-heading media_name">张小凡</h4>刘老师是佛问候我回购金额哦荣阿济格是GV是单个更舒适的回复搜索</div>
+					  	<div class="media-right text-right text-muted">2016-1-5 13:21:50<h5 class="blur"><h:outputLink value="javascript:;">回复</h:outputLink></h5></div>
+					  </li>
+					  <li class="media">
+					    <div class="media-left"><h:graphicImage class="media-object img-circle" value="img/test.png" alt="name" /></div>
+					    <div class="media-body list_test_body"><h4 class="media-heading media_name">张小凡</h4>刘老师是佛问候我回购金额哦荣阿济格是GV是单个更舒适的回复搜索</div>
+					  	<div class="media-right text-right text-muted">2016-1-5 13:21:50<h5 class="blur"><h:outputLink value="javascript:;">回复</h:outputLink></h5></div>
+					  </li>
+					</ul>
+					<h5 class="interact_c">参与互动</h5>
+					<h:form class="form_text">
+						<div class="form-group text-right">
+							<h:inputTextarea class="form-control tarea_1" onkeyup="size(this);" rows="3" placeholder="Textarea"></h:inputTextarea>
+							<small>0/<span id="span">200</span></small>
+							<h:commandButton type="submit" class="btn btn-danger present_tj" value="提交"></h:commandButton>
+						</div>
+					</h:form>
+					
+				    </div>
+				    <div role="tabpanel" class="tab-pane fade" id="profile1">
+
+				    <ul class="media-list list_test mCustomScrollbar" data-mcs-theme="dark">
+					  <li class="media">
+					    <div class="media-left"><h:graphicImage class="media-object img-circle" value="img/test.png" alt="name" /></div>
+					    <div class="media-body list_test_body"><h4 class="media-heading media_name">张小凡</h4>刘老师是佛问候我回购金额哦荣阿济格是GV是单个更舒适的回复搜索</div>
+					  	<div class="media-right text-right text-muted">2016-1-5 13:21:50<h5 class="blur"><h:outputLink value="javascript:;">回复</h:outputLink></h5></div>
+					  </li>
+					  <li class="media">
+					    <div class="media-left"><h:graphicImage class="media-object img-circle" value="img/test.png" alt="name" /></div>
+					    <div class="media-body list_test_body"><h4 class="media-heading media_name">张小凡</h4>刘老师是佛问候我回购金额哦荣阿济格是GV是单个更舒适的回复搜索</div>
+					  	<div class="media-right text-right text-muted">2016-1-5 13:21:50<h5 class="blur"><h:outputLink value="javascript:;">回复</h:outputLink></h5></div>
+					  </li>
+					</ul>
+					<h5 class="interact_c">参与互动</h5>
+					<h:form class="form_text">
+						<div class="form-group text-right">
+							<h:inputTextarea class="form-control tarea_1" onkeyup="size(this);" rows="3" placeholder="Textarea"></h:inputTextarea>
+							<small>0/<span id="span">200</span></small>
+							<h:commandButton type="submit" class="btn btn-danger present_tj" value="提交" />
+						</div>
+					</h:form>
+				    
+				    </div>
+		    		<div role="tabpanel" class="tab-pane fade" id="messages1">
+
+					<ul class="media-list list_test mCustomScrollbar" data-mcs-theme="dark">
+					  <li class="media">
+					    <div class="media-left"><h:graphicImage class="media-object img-circle" value="img/test.png" alt="name" /></div>
+					    <div class="media-body list_test_body"><h4 class="media-heading media_name">张小凡</h4>刘老师是佛问候我回购金额哦荣阿济格是GV是单个更舒适的回复搜索</div>
+					  	<div class="media-right text-right text-muted">2016-1-5 13:21:50<h5 class="blur"><h:outputLink value="javascript:;">回复</h:outputLink></h5></div>
+					  </li>
+					</ul>
+					<h5 class="interact_c">参与互动</h5>
+					<h:form class="form_text">
+						<div class="form-group text-right">
+							<textarea class="form-control tarea_1" onkeyup="size(this);" rows="3" placeholder="Textarea"></textarea>
+							<small>0/<span id="span">200</span></small>
+							<h:commandButton type="submit" class="btn btn-danger present_tj" value="提交" />
+						</div>
+					</h:form>
+
+		    		</div>
+				</div>
+			</div>
+			
+			<!--股票池-网络课程-观点-盘前资讯-->
+			<div class="container_stock">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs win" role="tablist">
+					    <li role="presentation" class="active"><a value="#Stockpool" class="winat" aria-controls="Stockpool" role="tab" data-toggle="tab">股票池</a></li>
+					    <li role="presentation"><a href="#course" aria-controls="course" role="tab" data-toggle="tab">网络课程</a></li>
+					    <li role="presentation"><a href="#viewpoint" aria-controls="viewpoint" role="tab" data-toggle="tab">观点</a></li>
+					    <li role="presentation"><a href="#information" aria-controls="information" role="tab" data-toggle="tab">盘前资讯</a></li>
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-content main_stock">
+						
+					    <div role="tabpanel" class="tab-pane fade in active" id="Stockpool">
+						
+						<div class="main_checkbox">
+							<div class="box_left">
+								<h:outputLabel class="checkbox-inline">
+									<h:selectBooleanCheckbox id="inlineCheckbox1" value="option1" />全选
+								</h:outputLabel>
+								<h:outputLabel class="checkbox-inline">
+									<h:selectBooleanCheckbox id="inlineCheckbox2" value="option2" />反选
+								</h:outputLabel>
+							</div>
+							<div class="box_right">
+								<h:commandButton type="delete" class="btn btn-danger present_tj2" value="删除" />
+								<h:commandButton type="additional" class="btn btn-info present_tj2" value="追加" />
+							</div>
+					    </div>
+					    <div class="stock_tab text-center">
+						    <table class="table table-striped table-hover table-responsive">
+						      <thead>
+						        <tr>
+						          <th> </th>			
+						          <th>推荐时间</th>
+						          <th>个股名称</th>
+						          <th>股票代码</th>
+						          <th>仓位状态</th>
+						          <th>买卖区间</th>
+						          <th>建议仓位</th>
+						          <th>止损</th>
+						          <th>操作</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr>
+						          <th scope="row">
+									  <h:selectBooleanCheckbox id="inlineCheckbox3" value="option1" />
+						          </th>
+						          <td>2016/03/18</td>
+						          <td>金正股份</td>
+						          <td>600446</td>
+						          <td>建仓</td>
+						          <td>25.80-30.02</td>
+						          <td>20%</td>
+						          <td>2080-22.02</td>
+						          <td>
+						          	<button type="button" class="btn btn-default amend2" value="查看">查看 <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></button>
+									<h:commandButton  class="btn btn-default amend2" value="修改"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> </h:commandButton>						          </td>
+						        </tr>
+						        <tr>
+						          <th scope="row">
+									  <h:selectBooleanCheckbox id="inlineCheckbox4" value="option1" />
+						          </th>
+						          <td>2016/03/18</td>
+						          <td>金正股份</td>
+						          <td>600446</td>
+						          <td>建仓</td>
+						          <td>25.80-30.02</td>
+						          <td>20%</td>
+						          <td>2080-22.02</td>
+						          <td>
+						          	<h:commandButton  class="btn btn-default amend2" value="查看"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></h:commandButton>
+									<h:commandButton  class="btn btn-default amend2" value="修改"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> </h:commandButton>						          </td>
+						        </tr>
+						        <tr>
+						          <th scope="row">
+									  <h:selectBooleanCheckbox id="inlineCheckbox5" value="option1" />
+						          </th>
+						          <td>2016/03/18</td>
+						          <td>金正股份</td>
+						          <td>600446</td>
+						          <td>建仓</td>
+						          <td>25.80-30.02</td>
+						          <td>20%</td>
+						          <td>2080-22.02</td>
+						          <td>
+						          	<h:commandButton  class="btn btn-default amend2" value="查看"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></h:commandButton>
+									<h:commandButton  class="btn btn-default amend2" value="修改"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> </h:commandButton>
+						          </td>
+						        </tr>
+						        <tr>
+						          <th scope="row">
+									  <h:selectBooleanCheckbox id="inlineCheckbox6" value="option1" />
+						          </th>
+						          <td>2016/03/18</td>
+						          <td>金正股份</td>
+						          <td>600446</td>
+						          <td>建仓</td>
+						          <td>25.80-30.02</td>
+						          <td>20%</td>
+						          <td>2080-22.02</td>
+						          <td>
+						          	<h:commandButton  class="btn btn-default amend2" value="查看"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></h:commandButton>
+									<h:commandButton  class="btn btn-default amend2" value="修改"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> </h:commandButton>						          </td>
+						        </tr>
+						        <tr>
+						          <th scope="row">
+									  <h:selectBooleanCheckbox id="inlineCheckbox7" value="option1" />
+						          </th>
+						          <td>2016/03/18</td>
+						          <td>金正股份</td>
+						          <td>600446</td>
+						          <td>建仓</td>
+						          <td>25.80-30.02</td>
+						          <td>20%</td>
+						          <td>2080-22.02</td>
+						          <td>
+						          	<h:commandButton  class="btn btn-default amend2" value="查看"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></h:commandButton>
+									<h:commandButton  class="btn btn-default amend2" value="修改"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> </h:commandButton>						          </td>
+						        </tr>
+						        <tr>
+						          <th scope="row">
+									  <h:selectBooleanCheckbox id="inlineCheckbox8" value="option1" />
+						          </th>
+						          <td>2016/03/18</td>
+						          <td>金正股份</td>
+						          <td>600446</td>
+						          <td>建仓</td>
+						          <td>25.80-30.02</td>
+						          <td>20%</td>
+						          <td>2080-22.02</td>
+						          <td><h:commandButton  class="btn btn-default amend2" value="查看"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></h:commandButton>
+									<h:commandButton  class="btn btn-default amend2" value="修改"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> </h:commandButton>						          </td>
+						        </tr>
+						        <tr>
+						          <th scope="row">
+									  <h:selectBooleanCheckbox id="inlineCheckbox9" value="option1" />
+						          </th>
+						          <td>2016/03/18</td>
+						          <td>金正股份</td>
+						          <td>600446</td>
+						          <td>建仓</td>
+						          <td>25.80-30.02</td>
+						          <td>20%</td>
+						          <td>2080-22.02</td>
+						          <td>
+						          	<h:commandButton  class="btn btn-default amend2" value="查看"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></h:commandButton>
+									<h:commandButton  class="btn btn-default amend2" value="修改"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> </h:commandButton>						          </td>
+						        </tr>
+						      </tbody>
+						    </table>
+						    
+						    <div class="col-xs-6 col-md-6 text-left page_ui">
+						    <h:form class="form-inline">
+							  <div class="form-group">
+							  	<h:outputLabel for="record">共计<span class="text-danger">138</span>条记录,</h:outputLabel>
+							    <h:outputLabel for="record2">共14页</h:outputLabel>
+							    <h:inputText class="form-control" id="record" placeholder="页码" />
+							  	<h:outputLabel for="record3"><h:outputLink value="javascript:;" class="text-primary"><u>跳转</u></h:outputLink></h:outputLabel>
+							  </div>
+							</h:form>  
+						    </div>
+						    
+						    <div class="col-xs-6 col-md-6 text-right">
+								<nav>
+								  <ul class="pagination page_ui2">
+								    <li>
+								      <h:outputLink value="#" aria-label="Previous">
+								        <span aria-hidden="true">首页</span>
+								      </h:outputLink>
+								    </li>
+								    <li><h:outputLink value="#">上一页</h:outputLink></li>
+								    <li><h:outputLink value="#">1</h:outputLink></li>
+								    <li><h:outputLink value="#">2</h:outputLink></li>
+								    <li><h:outputLink value="#">3</h:outputLink></li>
+								    <li><h:outputLink value="#">4</h:outputLink></li>
+								    <li><h:outputLink value="#">5</h:outputLink></li>
+								    <li><h:outputLink value="#">下一页</h:outputLink></li>
+								    <li>
+								      <h:outputLink value="#" aria-label="Next">
+								        <span aria-hidden="true">末页</span>
+								      </h:outputLink>
+								    </li>
+								  </ul>
+								</nav>
+						    </div>
+						    <div class="clearfix"></div>
+					    </div>
+					    
+					    </div>
+					    
+					    <div role="tabpanel" class="tab-pane fade" id="course">
+							<div class="main_checkbox">
+								<div class="box_left">
+									<h:outputLabel class="checkbox-inline">
+									  <h:selectBooleanCheckbox id="inlineCheckbox10" value="option1" /> 全选
+									</h:outputLabel>
+									<h:outputLabel class="checkbox-inline">
+									  <h:selectBooleanCheckbox id="inlineCheckbox11" value="option2" /> 反选
+									</h:outputLabel>
+								</div>
+								<div class="box_right">
+									<h:commandButton type="delete" class="btn btn-danger present_tj2" value="删除" />
+									<h:commandButton type="additional" class="btn btn-info present_tj2" value="追加"/>
+								</div>
+						    </div>
+					    
+						    <div class="stock_tab text-center">
+							    <table class="table table-striped table-hover table-responsive">
+							      <thead>
+							        <tr>
+							          <th> </th>			
+							          <th>发布时间</th>
+							          <th>课程标题</th>
+							          <th>收费金额</th>
+							          <th>操作</th>
+							        </tr>
+							      </thead>
+							      <tbody>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox12" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox13" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox14" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox15" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox16" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox17" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox18" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							      </tbody>
+							    </table>
+							    
+							    <div class="col-xs-6 col-md-6 text-left page_ui">
+							    <h:form class="form-inline">
+								  <div class="form-group">
+								  	<h:outputLabel for="record">共计<span class="text-danger">138</span>条记录,</h:outputLabel>
+								    <h:outputLabel for="record2">共14页</h:outputLabel>
+								    <h:inputText  class="form-control" id="record" placeholder="页码" />
+								  	<h:outputLabel for="record3"><h:outputLink value="javascript:;" class="text-primary"><u>跳转</u></h:outputLink></h:outputLabel>
+								  </div>
+								</h:form>  
+							    </div>
+							    
+							    <div class="col-xs-6 col-md-6 text-right">
+									<nav>
+									  <ul class="pagination page_ui2">
+									    <li>
+									      <h:outputLink value="#" aria-label="Previous">
+									        <span aria-hidden="true">首页</span>
+									      </h:outputLink>
+									    </li>
+									    <li><h:outputLink value="#">上一页</h:outputLink></li>
+									    <li><h:outputLink value="#">1</h:outputLink></li>
+									    <li><h:outputLink value="#">2</h:outputLink></li>
+									    <li><h:outputLink value="#">3</h:outputLink></li>
+									    <li><h:outputLink value="#">4</h:outputLink></li>
+									    <li><h:outputLink value="#">5</h:outputLink></li>
+									    <li><h:outputLink value="#">下一页</h:outputLink></li>
+									    <li>
+									      <h:outputLink value="#" aria-label="Next">
+									        <span aria-hidden="true">末页</span>
+									      </h:outputLink>
+									    </li>
+									  </ul>
+									</nav>
+							    </div>
+							    <div class="clearfix"></div>
+						    </div>
+
+						</div>
+					
+						<div role="tabpanel" class="tab-pane fade" id="viewpoint">
+							<div class="main_checkbox">
+								<div class="box_left">
+									<h:outputLabel class="checkbox-inline">
+									  <h:selectBooleanCheckbox id="inlineCheckbox19" value="option1" /> 全选
+									</h:outputLabel>
+									<h:outputLabel class="checkbox-inline">
+									  <h:selectBooleanCheckbox id="inlineCheckbox20" value="option2" /> 反选
+									</h:outputLabel>
+								</div>
+								<div class="box_right">
+									<h:commandButton type="delete" class="btn btn-danger present_tj2" value="删除" />
+									<h:commandButton type="additional" class="btn btn-info present_tj2" value="追加" />
+								</div>
+						    </div>
+					    
+						    <div class="stock_tab text-center">
+							    <table class="table table-striped table-hover table-responsive">
+							      <thead>
+							        <tr>
+							          <th> </th>			
+							          <th>发布时间</th>
+							          <th>课程标题</th>
+							          <th>收费金额</th>
+							          <th>操作</th>
+							        </tr>
+							      </thead>
+							      <tbody>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox21" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox22" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox23" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox24" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox25" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox26" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox27" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							      </tbody>
+							    </table>
+							    
+							    <div class="col-xs-6 col-md-6 text-left page_ui">
+							    <h:form class="form-inline">
+								  <div class="form-group">
+								  	<h:outputLabel for="record">共计<span class="text-danger">138</span>条记录,</h:outputLabel>
+								    <h:outputLabel for="record2">共14页</h:outputLabel>
+								    <h:inputText class="form-control" id="record" placeholder="页码" />
+								  	<h:outputLabel for="record3"><h:outputLink value="javascript:;" class="text-primary"><u>跳转</u></h:outputLink></h:outputLabel>
+								  </div>
+								</h:form>  
+							    </div>
+							    
+							    <div class="col-xs-6 col-md-6 text-right">
+									<nav>
+									  <ul class="pagination page_ui2">
+									    <li>
+									      <h:outputLink value="#" aria-label="Previous">
+									        <span aria-hidden="true">首页</span>
+									      </h:outputLink>
+									    </li>
+									    <li><h:outputLink value="#">上一页</h:outputLink></li>
+									    <li><h:outputLink value="#">1</h:outputLink></li>
+									    <li><h:outputLink value="#">2</h:outputLink></li>
+									    <li><h:outputLink value="#">3</h:outputLink></li>
+									    <li><h:outputLink value="#">4</h:outputLink></li>
+									    <li><h:outputLink value="#">5</h:outputLink></li>
+									    <li><h:outputLink value="#">下一页</h:outputLink></li>
+									    <li>
+									      <h:outputLink value="#" aria-label="Next">
+									        <span aria-hidden="true">末页</span>
+									      </h:outputLink>
+									    </li>
+									  </ul>
+									</nav>
+							    </div>
+							    <div class="clearfix"></div>
+							    </div>
+						</div>
+						    
+						<div role="tabpanel" class="tab-pane fade" id="information">
+							
+							<div class="main_checkbox">
+							<div class="box_left">
+								<label class="checkbox-inline">
+								  <h:selectBooleanCheckbox id="inlineCheckbox28" value="option1" /> 全选
+								</label>
+								<label class="checkbox-inline">
+								  <h:selectBooleanCheckbox id="inlineCheckbox29" value="option2" /> 反选
+								</label>
+							</div>
+							<div class="box_right">
+								<h:commandButton type="delete" class="btn btn-danger present_tj2" value="删除"/>
+								<h:commandButton type="additional" class="btn btn-info present_tj2" value="追加"/>
+							</div>
+					    </div>
+					    
+						    <div class="stock_tab text-center">
+							    <table class="table table-striped table-hover table-responsive">
+							      <thead>
+							        <tr>
+							          <th> </th>			
+							          <th>发布时间</th>
+							          <th>课程标题</th>
+							          <th>收费金额</th>
+							          <th>操作</th>
+							        </tr>
+							      </thead>
+							      <tbody>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox30" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox31" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox32" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox33" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox34" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox35" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							        <tr>
+							          <th scope="row">
+										  <h:selectBooleanCheckbox id="inlineCheckbox36" value="option1" />
+							          </th>
+							          <td>2016/03/18</td>
+							          <td>金证股份金证股份金证股份金证股份金证股份金证股份金证股份</td>
+							          <td>￥20.00</td>
+							          <td>
+							          	<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 查看</h:commandButton>
+										<h:commandButton  class="btn btn-default amend2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 修改</h:commandButton>
+							          </td>
+							        </tr>
+							      </tbody>
+							    </table>
+							    
+							    <div class="col-xs-6 col-md-6 text-left page_ui">
+							    <h:form class="form-inline">
+								  <div class="form-group">
+								  	<h:outputLabel for="record">共计<span class="text-danger">138</span>条记录,</h:outputLabel>
+								    <h:outputLabel for="record2">共14页</h:outputLabel>
+								    <h:inputText  class="form-control" id="record" placeholder="页码" />
+								  	<h:outputLabel for="record3"><h:outputLink value="javascript:;" class="text-primary"><u>跳转</u></h:outputLink></h:outputLabel>
+								  </div>
+								</h:form>  
+							    </div>
+							    
+							    <div class="col-xs-6 col-md-6 text-right">
+									<nav>
+									  <ul class="pagination page_ui2">
+									    <li>
+									      <h:outputLink value="#" aria-label="Previous">
+									        <span aria-hidden="true">首页</span>
+									      </h:outputLink>
+									    </li>
+									    <li><h:outputLink value="#">上一页</h:outputLink></li>
+									    <li><h:outputLink value="#">1</h:outputLink></li>
+									    <li><h:outputLink value="#">2</h:outputLink></li>
+									    <li><h:outputLink value="#">3</h:outputLink></li>
+									    <li><h:outputLink value="#">4</h:outputLink></li>
+									    <li><h:outputLink value="#">5</h:outputLink></li>
+									    <li><h:outputLink value="#">下一页</h:outputLink></li>
+									    <li>
+									      <h:outputLink value="#" aria-label="Next">
+									        <span aria-hidden="true">末页</span>
+									      </h:outputLink>
+									    </li>
+									  </ul>
+									</nav>
+							    </div>
+							    <div class="clearfix"></div>
+							</div>
+							
+						</div>
+					</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<!--右侧个股咨询-->
+<div class="rides-cs">
+	<div class="floatL">
+		<h:outputLink style="display:block" id="aFloatTools_Show" class="btnOpen" title="查看个股咨询" value="javascript:void(0);">展开</h:outputLink>
+		<h:outputLink style="display:none" id="aFloatTools_Hide" class="btnCtn" title="关闭个股咨询" value="javascript:void(0);">收缩</h:outputLink>
+	</div>
+	<div id="divFloatToolsView" class="floatR" style="display:none">
+		<div class="cn">个股咨询</div>
+		<div class="contact">
+			<h:form class="form-inline tact">
+			  <div class="form-group">
+			    <h:outputLabel for="contact">联系方式：</h:outputLabel>
+			    <h:inputText  class="form-control contact_form" id="contact" placeholder="请输入您的联系方式" />
+			  </div>
+			</h:form>
+			<h:form>
+				<textarea class="form-control contact_form2" rows="4" placeholder="请写下你想咨询的股票"></textarea>
+			</h:form>
+			<h:form class="tact tact2">
+				<div class="form-group">
+				    <h:outputLabel for="contact"><div class="rx_phone"><span class="glyphicon glyphicon-earphone"></span> 客服热线：400-12345678</div></h:outputLabel>
+				    <h:commandButton  class="btn btn-danger refer" value="提交"/>
+				</div>
+			</h:form>
+		</div>
+	</div>
+</div>
+</h:body>
+</ui:composition>

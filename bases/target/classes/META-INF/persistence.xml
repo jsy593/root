@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+	<persistence-unit name="eclipselink">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		
+		<class>com.fenghui.bases.jpaentities.RoomPassWord</class>
+		<class>com.fenghui.bases.jpaentities.PublishedChatRecord</class>
+		<class>com.fenghui.bases.jpaentities.TeacherOtherLink</class>
+		<class>com.fenghui.bases.jpaentities.CommentViewpoint</class>
+		<class>com.fenghui.bases.jpaentities.CommentCourse</class>
+		<class>com.fenghui.bases.jpaentities.AccessRecordViewpoint</class>
+		<class>com.fenghui.bases.jpaentities.AccessRecordCourse</class>
+		<class>com.fenghui.bases.jpaentities.AccessRecordInformation</class>
+		<class>com.fenghui.bases.jpaentities.InformationRoom</class>
+		<class>com.fenghui.bases.jpaentities.ChatRecord</class>
+		<class>com.fenghui.bases.jpaentities.NewsType</class>
+		<class>com.fenghui.bases.jpaentities.News</class>
+		<class>com.fenghui.bases.jpaentities.Room</class>
+		<class>com.fenghui.bases.jpaentities.RoomUser</class>
+		<class>com.fenghui.bases.jpaentities.LeaveWord</class>
+		<class>com.fenghui.bases.jpaentities.ViewPoint</class>
+		<class>com.fenghui.bases.jpaentities.Course</class>
+		<class>com.fenghui.bases.jpaentities.Information</class>
+		<class>com.fenghui.bases.jpaentities.TeacherProduct</class>
+		<class>com.fenghui.bases.jpaentities.Teacher</class>
+		<class>com.fenghui.bases.jpaentities.UserProduct</class>
+		<class>com.fenghui.bases.jpaentities.User</class>
+		<class>com.fenghui.bases.jpaentities.Person</class>
+		<class>com.fenghui.bases.jpaentities.Product</class>
+		
+		<class>com.fenghui.bases.jpadtos.RoomPassWordDTO</class>
+		<class>com.fenghui.bases.jpadtos.PublishedChatRecordDTO</class>
+		<class>com.fenghui.bases.jpadtos.TeacherOtherLinkDTO</class>
+		<class>com.fenghui.bases.jpadtos.CommentViewpointDTO</class>
+		<class>com.fenghui.bases.jpadtos.CommentCourseDTO</class>
+		<class>com.fenghui.bases.jpadtos.AccessRecordsViewpointDTO</class>
+		<class>com.fenghui.bases.jpadtos.AccessRecordCourseDTO</class>
+		<class>com.fenghui.bases.jpadtos.AccessRecordInformationDTO</class>
+		<class>com.fenghui.bases.jpadtos.InformationRoomDTO</class>
+		<class>com.fenghui.bases.jpadtos.ChatRecordDTO</class>
+		<class>com.fenghui.bases.jpadtos.NewsTypeDTO</class>
+		<class>com.fenghui.bases.jpadtos.RoomDTO</class>
+		<class>com.fenghui.bases.jpadtos.RoomUserDTO</class>
+		<class>com.fenghui.bases.jpadtos.ViewpointDTO</class>
+		<class>com.fenghui.bases.jpadtos.CourseDTO</class>
+		<class>com.fenghui.bases.jpadtos.InformationDTO</class>
+		<class>com.fenghui.bases.jpadtos.TeacherProductDTO</class>
+		<class>com.fenghui.bases.jpadtos.TeacherDTO</class>
+		<class>com.fenghui.bases.jpadtos.UserProductDTO</class>
+		<class>com.fenghui.bases.jpadtos.UserDTO</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://192.168.17.101:3306/devdatabase?useUnicode=true&amp;characterEncoding=utf-8" />
+			<property name="javax.persistence.jdbc.user" value="devuser" />
+			<property name="javax.persistence.jdbc.password" value="devpassword" />
+			<property name="eclipselink.ddl-generation" value="none" />
+			<property name="eclipselink.ddl-generation.output-mode" value="database" />
+		</properties>
+	</persistence-unit>
+</persistence>

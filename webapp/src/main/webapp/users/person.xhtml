@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Person</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link href="resources/css/jquery-ui-themes.css" type="text/css"
+		rel="stylesheet" />
+	<link href="data/styles.css" type="text/css" rel="stylesheet" />
+</h:head>
+<h:body>
+	<ui:composition template="/pagetemplates/common/commonLayout.xhtml">
+		<div id="base" class="" style="width: 100%">
+			<ui:define name="content">
+				<h:form>
+					<h:panelGrid columns="3">
+						<h:outputLabel for="personName" value="Person Name:" />
+						<h:inputText id="personName"
+							value="#{personController.person.personName}" required="true" />
+						<h:message for="personName" />
+
+						<h:outputLabel for="personGender" value="Person Gender:" />
+						<h:selectOneRadio id="personGender"
+							value="#{personController.person.personGender}">
+							<f:selectItem itemLabel="Male" itemValue="Male" />
+							<f:selectItem itemLabel="Female" itemValue="Female" />
+						</h:selectOneRadio>
+						<h:message for="personGender" />
+
+						<h:outputLabel for="personBirthday" value="Person Birthday:" />
+
+						<h:inputText id="personBirthday"
+							value="#{personController.person.personBirthday}" required="true">
+							<f:convertDateTime pattern="yyyy-MM-dd" />
+						</h:inputText>
+						<h:message for="personBirthday" />
+
+						<h:outputLabel for="personMobilePhone" value="Person MobilePhone:" />
+						<h:inputText id="personMobilePhone"
+							value="#{personController.person.personMobilePhone}"
+							required="true" />
+						<h:message for="personMobilePhone" />
+
+						<h:outputLabel for="personEMail" value="Person EMail:" />
+						<h:inputText id="personEMail"
+							value="#{personController.person.personEMail}" required="true" />
+						<h:message for="personEMail" />
+
+						<h:outputLabel for="personIDCard" value="Person IDCard:" />
+						<h:inputText id="personIDCard"
+							value="#{personController.person.personIDCard}" required="true" />
+						<h:message for="personIDCard" />
+					</h:panelGrid>
+
+					<h:panelGrid>
+						<h:panelGroup>
+							<h:commandButton value="addPerson"
+								action="#{personController.addPerson}" />
+						</h:panelGroup>
+					</h:panelGrid>
+				</h:form>
+			</ui:define>
+		</div>
+	</ui:composition>
+</h:body>
+</html>

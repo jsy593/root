@@ -1,0 +1,47 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+	<link rel="stylesheet" href="css/layout.css" /> -->
+	<style type="text/css">
+		body{background-color: #F8F8F8;}
+	</style>
+</h:head>
+<h:body>
+<div class="container-fluid login_bj">
+	<div class="row">
+		<div class="login_conten">
+
+			<div class="login_right">
+				<div class="login_title text-center"><h3>上海新兰德平台网站</h3></div>
+				<h:form id="defaultForm" class="form-horizontal">
+					<div class="form-group has-feedback login_m">
+						<span class="glyphicon glyphicon-user form-control-feedback loginicon" aria-hidden="true"></span>
+						<h:inputText type="text" class="form-control login_b" name="username" placeholder="用户名" value="#{usersController.users.userName}" />
+					</div>
+					<div class="form-group has-feedback login_m">
+						<span class="glyphicon glyphicon-lock form-control-feedback loginicon" aria-hidden="true"></span>
+						<h:inputText type="text" class="form-control login_b" name="password" placeholder="密码" value="#{usersController.users.userPassword}" />
+						<!-- <h:inputText type="" value="#{usersController.users.userPerson}"/> -->
+					</div>
+					<div class="form-group">
+						<div class="row">
+						    <div class="col-sm-12">
+						      <h:commandButton type="submit" class="btn btn-danger btn-block btn-lg login_dl" id="validateBtn" value="登录" action="#{usersController.loginUsers}">
+						      	<f:param name="userPerson" value="1" />
+						      </h:commandButton>
+						    </div>
+					    </div>
+					</div>
+				</h:form>
+			</div>
+			
+		</div>
+	</div>
+</div>
+</h:body>
+</ui:composition>

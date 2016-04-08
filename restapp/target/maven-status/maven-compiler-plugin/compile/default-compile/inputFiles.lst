@@ -1,0 +1,9 @@
+/home/dev/workspace/root/restapp/src/main/java/com/fenghui/restapp/entities/package-info.java
+/home/dev/workspace/root/restapp/src/main/java/com/fenghui/restapp/servlets/package-info.java
+/home/dev/workspace/root/restapp/src/main/java/com/fenghui/restapp/entities/Student.java
+/home/dev/workspace/root/restapp/src/main/java/com/fenghui/restapp/servlets/TestServletContainer.java
+/home/dev/workspace/root/restapp/src/main/java/com/fenghui/restapp/services/package-info.java
+/home/dev/workspace/root/restapp/src/main/java/com/fenghui/restapp/servlets/RestAppServlet.java
+/home/dev/workspace/root/restapp/src/main/java/com/fenghui/restapp/clients/package-info.java
+/home/dev/workspace/root/restapp/src/main/java/com/fenghui/restapp/services/JerseyRestService.java
+/home/dev/workspace/root/restapp/src/main/java/com/fenghui/restapp/clients/JerseyClient.java
